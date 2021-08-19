@@ -1,0 +1,86 @@
+@import "variables";
+
+@media (max-width: 480px) {
+    nav {
+
+        .nav-wrapper {
+
+            .burger-wrapper {
+                display: flex;
+            }
+
+            .burger-wrapper.burger-open {
+
+                span:nth-child(1) {
+                    transform: translateY(0.55rem) rotate(405deg);
+                }
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+                span:nth-child(3) {
+                    transform: translateY(-0.55rem) rotate(-405deg);
+                }
+            }
+
+            .menus {
+                display: none;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: 0.3s;
+                transform: translateX(10rem);
+            }
+
+            .menus.open {
+                background: #EFF2F999;
+                width: 65vw;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                backdrop-filter: blur(20px);
+                animation: slide 0.5s ease-out forwards;
+                transition: 0.3s;
+                transform: translateX(10rem);
+
+                li {
+
+                    a.current:after, a:after {
+                        left: 2rem;
+                        width: 20%;
+                        background-color: rgb(2, 100, 230);
+                        transform: translate(0);
+                    }
+    
+                    a:after {
+                        background-color: #888888;
+                    }
+                }
+            }
+        }
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: none;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+            margin: 0 auto;
+            width: 90%;
+        }
+    }
+
+    .top-tools {
+        display: none;
+    }
+
+    .modal {
+        padding: 0.5rem;
+    }
+}
+@keyframes slide {
+    from {transform: translateX(10rem);}
+    to {transform: translateX(0);}
+}
