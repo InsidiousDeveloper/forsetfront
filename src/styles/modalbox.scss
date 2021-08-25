@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+@import "variables";
+
+.modalbox {
+    margin: 15rem auto;
+    font-family: "Poppins", sans-serif;
+    //max-width: 100rem;
+    width: 50rem;
+    height: 20rem;
+    padding: 2.5rem;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    z-index: 20;
+
+    .modalbox-title {
+        font-family: Comfortaa, sans-serif;
+        font-size: $fontXXXL;
+        font-weight: 600;
+        line-height: 0;
+        color: #0300ac;
+        margin-bottom: 50px;
+    }
+    .modalbox-info {
+        flex: 0 1 50%;
+    }
+    .modalbox-top {
+        display: flex;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #c4c4c4;
+    }
+    .modalbox-imagebox {
+        max-width: 200px;
+    }
+    .modalbox-image {
+        width: 100%;
+    }
+    .modalbox-condition {
+        border-left: 1px solid #c4c4c4;
+        padding-left: 40px;
+        flex: 0 1 50%;
+    }
+    .modalbox-isactive div {
+        display: inline-block;
+        margin-right: 15px;
+        width: 10px;
+        height: 10px;
+        background-color: teal;
+        border-radius: 50%;
+    }
+    .modalbox-number {
+        font-family: Rubik, serif;
+        font-size: 20px;
+        color: black;
+        line-height: 0;
+        margin-bottom: 20px;
+    }
+    .modalbox-price {
+        font-size: 15px;
+        color: #6f6f6f;
+    }
+    .modalbox-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .modalbox-subtitle {
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .modalbox-content-item {
+        flex: 0 1 30%;
+    }
+    .modalbox-content-item:nth-child(2) {
+        text-align: center;
+    }
+    .modalbox-content-item:nth-child(3) {
+        text-align: right;
+    }
+}
+
+.client-modalbox {
+    margin: 80px auto;
+    font-family: "Poppins", sans-serif;
+    max-width: 700px;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+
+    .client-top {
+        display: flex;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #c4c4c4;
+        padding-bottom: 10px;
+
+        .client-left {
+            display: flex;
+            align-items: center;
+            flex: 0 1 55%;
+            padding-right: 20px;
+
+            .client-imagebox {
+                width: 10rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .client-info {
+            margin-left: 20px;
+
+            .client-info-surname,
+            .client-info-name,
+            .client-info-second-name {
+                font-family: "Rubik", sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                color: #0300ac;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+        }
+
+
+
+        .client-right {
+            border-left: 1px solid #c4c4c4;
+            padding-left: 20px;
+            flex: 0 1 40%;
+
+            .client-conditions {
+                display: flex;
+                align-items: center;
+
+                .client-isactive {
+                    margin-left: 24px;
+                }
+            }
+
+            .client-rent-dates {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 15%;
+
+                .client-dates-item {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .client-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .client-content-item {
+            .client-title {
+                font-family: "Rubik", sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .item-title {
+                font-size: 20px;
+                margin-bottom: 3px;
+
+                .client-descr {
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: #8d8585;
+                }
+            }
+        }
+
+        .client-content-item:nth-child(2) {
+            text-align: center;
+        }
+        .client-content-item:nth-child(3) {
+            text-align: right;
+        }
+    }
+
+}
+@media (max-width: 695px) {
+    .client-top {
+        display: block;
+    }
+    .client-conditions {
+        justify-content: space-around;
+    }
+    .client-rent-dates {
+        justify-content: space-around;
+        margin-top: 8%;
+    }
+    .client-right {
+        border: none;
+    }
+    .client-left {
+        justify-content: center;
+    }
+    .client-content {
+        display: block;
+    }
+    .client-content-item {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 4px 0;
+        border-bottom: 1px solid #c4c4c4;
+    }
+    .client-content-item::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 17px;
+        height: 10px;
+        margin-right: 10px;
+        //background: url("../img/dropdown.svg") 0 0 no-repeat;
+    }
+    .client-content-item:nth-child(2),
+    .client-content-item:nth-child(3) {
+        text-align: left;
+    }
+    .item-descr {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .client-info-surname,
+    .client-info-name,
+    .client-info-second-name {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    .client-title {
+        font-size: 14px;
+    }
+    .client-number {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 530px) {
+    .modalbox {
+        padding: 20px;
+    }
+    .modalbox-content-item {
+        position: relative;
+        padding: 4px 0;
+        text-align: left !important;
+    }
+    .modalbox-content-item::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 17px;
+        height: 10px;
+        margin-right: 10px;
+        //background: url("../img/dropdown.svg") 0 0 no-repeat;
+    }
+    .modalbox-content {
+        display: block;
+    }
+    .modalbox-content-item {
+        border-bottom: 1px solid #c4c4c4;
+    }
+    .modalbox-imagebox {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    .modalbox-top {
+        flex-direction: column;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .modalbox-condition {
+        border: none;
+        padding-left: 0;
+    }
+    .modalbox-title {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .modalbox-descr {
+        display: none;
+    }
+}
